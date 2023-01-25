@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/policies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_120dp"
+        android:text="Policies"
+        android:textColor="@color/grey2"
+        android:textSize="@dimen/dimen_34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/red_button"
+        android:layout_width="@dimen/dimen_240dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/export_as_csv"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/dimen_15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_policies" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/policy"
+        style="@style/White.Button"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:text="@string/policy"
+        app:layout_constraintTop_toBottomOf="@id/policies"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/product"
+        style="@style/White.Button"
+        android:text="@string/product_category"
+        app:layout_constraintTop_toBottomOf="@id/policy"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/country"
+        style="@style/White.Button"
+        android:text="@string/origin_country"
+        app:layout_constraintTop_toBottomOf="@id/product"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/brand"
+        style="@style/White.Button"
+        android:text="@string/brand"
+        app:layout_constraintTop_toBottomOf="@id/country"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/grey2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_70dp">
+
+            <ImageView
+                android:layout_marginRight="@dimen/dimen_5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="@dimen/dimen_34dp"
+                android:layout_height="@dimen/dimen_34dp"
+                android:drawableEnd="@drawable/ic_search"
+                android:src="@drawable/ic_search"
+                app:tint="@color/white" />
+
+            <ImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_logo"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/current_policies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_50dp"
+        android:text="@string/current_policies"
+        android:textColor="@color/grey2"
+        android:textSize="@dimen/dimen_34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brand" />
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:drawableTint="@color/grey2"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:textSize="@dimen/dimen_14sp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/grey2"
+                android:textStyle="bold"
+                android:text="@string/country_of_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginStart="@dimen/dimen_60dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:textColor="@color/grey2"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimen_14sp"
+                android:text="@string/product_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

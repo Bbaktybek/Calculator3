@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="cornerRadius">200dp</item>
+        <item name="fontFamily">@font/noto_serif_bold</item>
+    </style>
+
+    <style name="Grey.Button" parent="Base.Button">
+        <item name="backgroundTint">@color/grey</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Orange.Button" parent="Base.Button">
+        <item name="backgroundTint">@color/orange</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Grey.Dark.Button" parent="Base.Button">
+        <item name="backgroundTint">@color/dark_grey</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="White.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/grey2</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:layout_width">370dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:drawableTint">@color/grey2</item>
+        <item name="android:drawableEnd">@drawable/ic_next</item>
+    </style>
+
+
+</resources>
