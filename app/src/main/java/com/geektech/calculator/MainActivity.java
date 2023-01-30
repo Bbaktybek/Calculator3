@@ -22,9 +22,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
+
     }
 
-  
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MaterialButton materialButton = findViewById(R.id.result_button);
+
+        materialButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtra("Kay", result.toString());
+            startActivity(intent);
+        });
+
+    }
+
     public void onNumberClick(View view) {
         switch (view.getId()) {
             case R.id.btn_one:
